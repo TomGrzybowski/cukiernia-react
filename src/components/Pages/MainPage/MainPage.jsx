@@ -1,6 +1,33 @@
+import { useEffect, useState } from "react";
 import styles from "./MainPage.module.scss";
+import { getDownloadURL, ref } from "firebase/storage";
+import { storage } from "../../../api/firebaseConfig.js";
 
 const MainPage = () => {
+  const [imageOneUrl, setImageOneUrl] = useState("");
+  const [imageTwoUrl, setImageTwoUrl] = useState("");
+
+  useEffect(() => {
+    // Fetch the image URLs from Firebase Storage
+    const fetchImageURLs = async () => {
+      try {
+        const storageRefOne = ref(storage, "assets/zdjecie-3.jpg");
+        const storageRefTwo = ref(storage, "assets/zdjecie-1.jpg");
+        // const imageName = "main-logo.png"; // Replace with the specific image name
+
+        // Get the reference to the specific image
+        const urlOne = await getDownloadURL(storageRefOne);
+        const urlTwo = await getDownloadURL(storageRefTwo);
+
+        setImageOneUrl(urlOne);
+        setImageTwoUrl(urlTwo);
+      } catch (error) {
+        console.error("Error fetching image URL:", error);
+      }
+    };
+
+    fetchImageURLs();
+  }, []);
   return (
     <main>
       <div className={styles.container}>
@@ -25,14 +52,14 @@ const MainPage = () => {
           </p>
         </div>
         <img
-          src="src/assets/zdjecie-3.jpg"
+          src={imageOneUrl}
           width={500}
           height={300}
           alt="Zdjęcie tortu"
           className={styles["home-img"]}
         />
         <img
-          src="src/assets/zdjecie-1.jpg"
+          src={imageTwoUrl}
           width={500}
           height={300}
           alt="Zdjęcie tortu"
