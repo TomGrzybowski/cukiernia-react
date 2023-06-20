@@ -1,4 +1,5 @@
 import styles from "./components.module.scss";
+// import logo from "../../assets/main-logo.png";
 
 import Socials from "../Socials/Socials.jsx";
 import MainNavbar from "../MainNavbar/MainNavbar.jsx";
@@ -39,7 +40,7 @@ const Header = () => {
         {/* <MobileMenu /> */}
         <div className={styles.box}>
           <img
-            src="src/assets/main-logo.png"
+            src="../../assets/main-logo.png"
             alt="Logo cukierni"
             width={180}
             height={180}
@@ -54,7 +55,6 @@ const Header = () => {
 
           <Socials />
         </div>
-        Hello
         <MainNavbar />
         {isMobile && (
           <MobileMenu handleClose={handleClose} shown={showMobileMenu} />
