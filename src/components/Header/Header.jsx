@@ -54,9 +54,8 @@ const Header = () => {
 
           <Socials />
         </div>
-
+        Hello
         <MainNavbar />
-
         {isMobile && (
           <MobileMenu handleClose={handleClose} shown={showMobileMenu} />
         )}
