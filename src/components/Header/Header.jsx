@@ -38,13 +38,13 @@ const Header = () => {
       <header className={styles.header}>
         {/* <MobileMenu /> */}
         <div className={styles.box}>
-          <img
+          {/* <img
             src="src/assets/main-logo.png"
             alt="Logo cukierni"
             width={180}
             height={180}
             className={styles.header__logo}
-          />
+          /> */}
           <FontAwesomeIcon
             icon={faBars}
             size="xl"
