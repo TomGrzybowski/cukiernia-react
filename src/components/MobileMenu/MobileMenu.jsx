@@ -1,4 +1,5 @@
 import styles from "./components.module.scss";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
@@ -76,6 +77,11 @@ const MobileMenu = ({ handleClose, shown }) => {
       </nav>
     </div>
   );
+};
+
+MobileMenu.propTypes = {
+  handleClose: PropTypes.func,
+  shown: PropTypes.bool,
 };
 
 export default MobileMenu;
