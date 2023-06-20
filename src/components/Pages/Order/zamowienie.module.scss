@@ -1,0 +1,29 @@
+.container {
+  margin: auto;
+  padding-top: 2rem;
+  max-width: min(95vw, 1100px);
+  max-width: min(95svw, 1100px);
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.socials {
+  margin: auto;
+  display: flex;
+
+  gap: 2rem;
+  width: fit-content;
+}
+.socials__icon {
+  color: var(--main-color);
+  transition: transform;
+  transition-duration: 300ms;
+  height: 2rem;
+}
+.socials__icon:hover {
+  transform: scale(1.4);
+}

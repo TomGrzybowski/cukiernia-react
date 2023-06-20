@@ -1,0 +1,35 @@
+.gallery {
+  list-style: none;
+  padding-top: 2rem;
+  margin: auto;
+  display: grid;
+  gap: 0.2rem;
+  row-gap: 1rem;
+  width: 100%;
+
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}
+
+.image {
+  max-width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out; // Adjust the transition duration as needed
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1); // Scale the image on hover
+  }
+}
+
+.listItem {
+  margin: auto;
+  width: 200px;
+  padding: 0;
+}
+
+@media screen and (min-width: 1100px) {
+  .gallery {
+    gap: 0.5rem;
+    row-gap: 1rem;
+  }
+}
