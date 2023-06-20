@@ -24,7 +24,7 @@ const MainPage = () => {
             tylko smaczne, ale również zdrowsze.
           </p>
         </div>
-        {/* <img
+        <img
           src="src/assets/zdjecie-3.jpg"
           width={500}
           height={300}
@@ -37,7 +37,7 @@ const MainPage = () => {
           height={300}
           alt="Zdjęcie tortu"
           className={styles["home-img"]}
-        /> */}
+        />
         <div className={styles.description}>
           {/* <h1></h1> */}
           <p className={styles.paragraph}>
