@@ -12,7 +12,7 @@ const fontLink = React.createElement("link", {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/cukiernia-react">
       {fontLink}
       <App />
     </BrowserRouter>
