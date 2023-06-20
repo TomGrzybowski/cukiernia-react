@@ -7,20 +7,22 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const StyledNavLink = styled(NavLink)`
-  color: var(--main-color);
-  font-weight: bold;
+  &.active {
+    color: var(--main-color);
+    font-weight: bold;
 
-  &::after {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: var(--main-color);
-    position: relative;
-    top: 0.5rem;
-    left: 0;
-    display: block;
-    visibility: visible;
-    border-radius: 10px;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: var(--main-color);
+      position: relative;
+      top: 0.5rem;
+      left: 0;
+      display: block;
+      visibility: visible;
+      border-radius: 10px;
+    }
   }
 `;
 
@@ -51,27 +53,35 @@ const MobileMenu = ({ handleClose, shown }) => {
       <nav className={styles["mobile-navbar"]}>
         <ul className={styles["mobile-navlist"]}>
           <li>
-            <StyledNavLink to="/">Strona główna</StyledNavLink>
+            <StyledNavLink to="/" onClick={handleClose}>
+              Strona główna
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/oferta" onClick={handleClose}>
+              Oferta
+            </StyledNavLink>
           </li>
 
           <li>
-            <StyledNavLink to="/">Strona główna</StyledNavLink>
+            <StyledNavLink to="/cennik" onClick={handleClose}>
+              Cennik
+            </StyledNavLink>
           </li>
           <li>
-            <StyledNavLink to="/oferta">Oferta</StyledNavLink>
-          </li>
-
-          <li>
-            <StyledNavLink to="/cennik">Cennik</StyledNavLink>
+            <StyledNavLink to="/kontakt" onClick={handleClose}>
+              Kontakt
+            </StyledNavLink>
           </li>
           <li>
-            <StyledNavLink to="/kontakt">Kontakt</StyledNavLink>
+            <StyledNavLink to="/galeria" onClick={handleClose}>
+              Galeria
+            </StyledNavLink>
           </li>
           <li>
-            <StyledNavLink to="/galeria">Galeria</StyledNavLink>
-          </li>
-          <li>
-            <StyledNavLink to="/zamowienie">Zamówienie</StyledNavLink>
+            <StyledNavLink to="/zamowienie" onClick={handleClose}>
+              Zamówienie
+            </StyledNavLink>
           </li>
         </ul>
       </nav>

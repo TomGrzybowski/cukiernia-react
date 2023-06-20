@@ -28,6 +28,7 @@ const MainPage = () => {
 
     fetchImageURLs();
   }, []);
+
   return (
     <main>
       <div className={styles.container}>
