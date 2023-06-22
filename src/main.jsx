@@ -4,6 +4,7 @@ import App from "./components/App.jsx";
 import "./styles/globals.css";
 import "./styles/variables.css";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./api/authContext.jsx";
 
 const fontLink = React.createElement("link", {
   href: "https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap",
@@ -13,8 +14,10 @@ const fontLink = React.createElement("link", {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/cukiernia-react">
-      {fontLink}
-      <App />
+      <AuthProvider>
+        {fontLink}
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

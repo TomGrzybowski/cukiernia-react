@@ -1,0 +1,20 @@
+.container {
+  padding-top: 2rem;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  & .buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.moveButton {
+  padding: 0 0.3rem;
+}
+
+.form {
+  margin: 1rem 0;
+}

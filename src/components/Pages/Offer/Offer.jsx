@@ -103,8 +103,8 @@ const Oferta = () => {
               .map((taste, index) => (
                 <li className={styles.item} key={index}>
                   {taste.name}
-                  {taste.skład && (
-                    <p className={styles.afterContent}>Skład: {taste.skład}</p>
+                  {taste.sklad && (
+                    <p className={styles.afterContent}>Skład: {taste.sklad}</p>
                   )}
                 </li>
               ))}
@@ -116,8 +116,8 @@ const Oferta = () => {
               .map((taste, index) => (
                 <li className={styles.item} key={index}>
                   {taste.name}
-                  {taste.skład && (
-                    <p className={styles.afterContent}>Skład: {taste.skład}</p>
+                  {taste.sklad && (
+                    <p className={styles.afterContent}>Skład: {taste.sklad}</p>
                   )}
                 </li>
               ))}
