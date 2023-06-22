@@ -10,7 +10,7 @@ export default defineConfig({
       targets: [{ src: "src/assets", dest: "dist/assets" }],
     }),
   ],
-  base: "/cukiernia-react/",
+  base: "/cukiernia-react",
   // root: "./src",
   // build: {
   //   rollupOptions: {
