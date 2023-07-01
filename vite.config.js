@@ -12,12 +12,14 @@ export default defineConfig({
   ],
   base: "/cukiernia-react",
 
-  build: {
-    rollupOptions: {
-      external: ["react-router", "react-router-dom"],
-    },
-  },
+  // TO RACZEJ NIE TO
+  // build: {
+  //   rollupOptions: {
+  //     external: ["react-router", "react-router-dom"],
+  //   },
+  // },
 
+  //TO NIE WIEM
   // root: "./src",
   // build: {
   //   rollupOptions: {
